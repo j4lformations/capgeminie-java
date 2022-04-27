@@ -15,6 +15,7 @@
 		<module>chap-05-structure-iterative</module>
 		<module>chap-06-tableaux-chaines-de-caracteres</module>
 		<module>chap-07-corrections</module>
+		<module>chap-08-notion-de-classe-et-objet</module>
 	</modules>	
 	
 	<properties>
