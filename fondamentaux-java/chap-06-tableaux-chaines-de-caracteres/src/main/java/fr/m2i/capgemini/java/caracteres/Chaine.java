@@ -27,5 +27,11 @@ public class Chaine {
 		System.out.println(kim.equals(kimkim));
 		
 		
+		String autreChaine = "Joachim";
+		System.out.println(autreChaine);
+		
+		System.out.println(uneChaine == autreChaine);
+		
+		
 	}
 }

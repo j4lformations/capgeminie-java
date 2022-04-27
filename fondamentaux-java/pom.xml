@@ -14,6 +14,7 @@
 		<module>chap-04-structure-decisionnelle</module>
 		<module>chap-05-structure-iterative</module>
 		<module>chap-06-tableaux-chaines-de-caracteres</module>
+		<module>chap-07-corrections</module>
 	</modules>	
 	
 	<properties>
