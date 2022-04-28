@@ -20,7 +20,7 @@ public class Personne {
 		compteur++;
 	}
 
-	// Methode d'instances
+	// Methodes d'instances
 	public String getPrenom() {
 		return prenom;
 	}
