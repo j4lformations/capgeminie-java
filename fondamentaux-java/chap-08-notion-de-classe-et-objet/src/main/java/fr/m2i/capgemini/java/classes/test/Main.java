@@ -8,14 +8,14 @@ import fr.m2i.capgemini.java.classes.Personne;
 public class Main {
 
 	public static void main(String[] args) {
-
-		Compte compte;// Declaration d'une variable de type Compte
-
-		/*
-		 * Initialisation de la variable compte Le mot cle new permet de construire un
-		 * objet compte On dit qu'on crée une instance de compte. Puis on l'affecte à la
-		 * variable compte
-		 */
+//
+//		Compte compte;// Declaration d'une variable de type Compte
+//
+//		/*
+//		 * Initialisation de la variable compte Le mot cle new permet de construire un
+//		 * objet compte On dit qu'on crée une instance de compte. Puis on l'affecte à la
+//		 * variable compte
+//		 */
 //		compte = new Compte();
 //		compte = new Compte("CPT01");
 //		compte = new Compte("CPT01", 1500);
@@ -59,13 +59,13 @@ public class Main {
 //		System.out.println(alex.getPrenom());
 //		System.out.println(alex.getDdn());
 		System.out.println(alex.affiche());
-		System.out.println(Personne.compteur);
+		System.out.println(Personne.getCompteur());
 		
 		System.out.println();
 		
 		Personne aline = new Personne("Aline", LocalDate.of(2000, 06, 20));
-		System.out.println(Personne.compteur);
-		System.out.println(Personne.compteur);
+		System.out.println(Personne.getCompteur());
+		System.out.println(Personne.getCompteur());
 		
 		aline.seMarier(alex);
 		
@@ -74,8 +74,6 @@ public class Main {
 		
 		System.out.println(aline.affiche());	
 		System.out.println(alex.affiche());
-		
-		
 		
 	}
 }

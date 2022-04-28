@@ -4,14 +4,19 @@ public class Methode {
 
 	public static void main(String[] args) {
 		// On fait appelle à la methode
-		salut("Antoine");
-		salut("Tarek");
-		salut("Ndeye");
-		salut(null);
-		salut();
-
-		double carre = calculCarre(5);
-		System.out.println(carre * carre%4);
+//		salut("Antoine");
+//		salut("Tarek");
+//		salut("Ndeye");
+//		salut(null);
+//		salut();
+//
+//		double carre = calculCarre(5);
+//		System.out.println(carre * carre%4);
+		
+		salut("25");
+		
+		Methode m = new Methode();
+		m.autreCalculCarre("25");
 	}
 
 	/*
@@ -44,5 +49,9 @@ public class Methode {
 		// Les instructions
 		// Et seulement apres les instructions, le return
 		return Math.pow(nombre, 2);
+	}
+	
+	double autreCalculCarre(String chaine) {
+		return Double.parseDouble(chaine);
 	}
 }

@@ -10,9 +10,8 @@ public class Personne {
 	private LocalDate ddn;
 	private Personne conjoint;
 	
-	
 	// Attirbut de classe
-	public static int compteur;
+	private static int compteur;
 
 	public Personne(String prenom, LocalDate ddn) {
 		this.prenom = prenom;
@@ -35,6 +34,10 @@ public class Personne {
 
 	public Personne getConjoint() {
 		return conjoint;
+	}
+
+	public static int getCompteur() {
+		return compteur;
 	}
 
 	private int getAge() {
