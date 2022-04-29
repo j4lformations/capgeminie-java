@@ -18,6 +18,7 @@
 		<module>chap-08-notion-de-classe-et-objet</module>
 		<module>chap-09-corrections</module>
 		<module>chap-10-heritage-polymorphisme</module>
+		<module>chap-11-classe-abstraite</module>
 	</modules>	
 	
 	<properties>
