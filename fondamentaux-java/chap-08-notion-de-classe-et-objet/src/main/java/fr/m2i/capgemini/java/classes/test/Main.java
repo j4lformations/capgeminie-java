@@ -2,7 +2,6 @@ package fr.m2i.capgemini.java.classes.test;
 
 import java.time.LocalDate;
 
-import fr.m2i.capgemini.java.classes.Compte;
 import fr.m2i.capgemini.java.classes.Personne;
 
 public class Main {
@@ -58,7 +57,7 @@ public class Main {
 				
 //		System.out.println(alex.getPrenom());
 //		System.out.println(alex.getDdn());
-		System.out.println(alex.affiche());
+		System.out.println(alex);
 		System.out.println(Personne.getCompteur());
 		
 		System.out.println();
@@ -72,8 +71,8 @@ public class Main {
 //		System.out.println(aline.getConjoint().getPrenom());
 //		System.out.println(alex.getConjoint().getPrenom());
 		
-		System.out.println(aline.affiche());	
-		System.out.println(alex.affiche());
+		System.out.println(aline);	
+		System.out.println(alex);
 		
 	}
 }

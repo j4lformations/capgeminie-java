@@ -17,6 +17,7 @@
 		<module>chap-07-corrections</module>
 		<module>chap-08-notion-de-classe-et-objet</module>
 		<module>chap-09-corrections</module>
+		<module>chap-10-heritage-polymorphisme</module>
 	</modules>	
 	
 	<properties>

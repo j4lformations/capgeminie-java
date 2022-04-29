@@ -2,8 +2,9 @@ package fr.m2i.capgemini.java.classes;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.Objects;
 
-public class Personne {
+public class Personne{
 
 	// Attributs d'instance
 	private String prenom;
@@ -17,6 +18,11 @@ public class Personne {
 		this.prenom = prenom;
 		this.ddn = ddn;
 		compteur++;
+	}
+	
+	public String plus(Personne p) {
+		// Ici le code de votre ajout
+		return "a + b";
 	}
 
 	// Methodes d'instances
@@ -40,7 +46,8 @@ public class Personne {
 		return compteur;
 	}
 
-	private int getAge() {
+	// Visibilité à destination des enfants
+	protected int getAge() {
 		LocalDate aujourdhui = LocalDate.now(); // Retourne la date courante
 		Period ecart = ddn.until(aujourdhui); // calcul la period entre 2 dates
 		return ecart.getYears(); // La periode en années
@@ -53,6 +60,23 @@ public class Personne {
 		}
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(prenom);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Personne other = (Personne) obj;
+		return prenom.equalsIgnoreCase(other.prenom);
+	}
+
 	/**
 	 * Permet de decrire textuellement l'objet courant
 	 * 
@@ -62,7 +86,8 @@ public class Personne {
 	 * 
 	 * @return
 	 */
-	public String affiche() {
+	@Override
+	public String toString() {
 		String affichage = String.format("%s, %s ans", prenom, getAge());
 		if (conjoint != null) {
 			affichage += String.format(" a pour conjoint %s, %s ans", conjoint.prenom, conjoint.getAge());
