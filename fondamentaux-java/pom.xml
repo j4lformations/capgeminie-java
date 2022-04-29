@@ -19,6 +19,7 @@
 		<module>chap-09-corrections</module>
 		<module>chap-10-heritage-polymorphisme</module>
 		<module>chap-11-classe-abstraite</module>
+		<module>chap-12-interfaces</module>
 	</modules>	
 	
 	<properties>
