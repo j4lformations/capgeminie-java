@@ -20,6 +20,8 @@
 		<module>chap-10-heritage-polymorphisme</module>
 		<module>chap-11-classe-abstraite</module>
 		<module>chap-12-interfaces</module>
+		<module>chap-13-collections</module>
+		<module>chap-14-corrections</module>
 	</modules>	
 	
 	<properties>
