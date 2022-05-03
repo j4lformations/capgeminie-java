@@ -4,68 +4,160 @@ import java.util.Scanner;
 
 public class Dab {
 
-	private static Scanner scanner;
+    private Compte[] comptes;
 
-	private Compte compte;
-	//private Compte[] comptes;
+    public Dab() {
+        comptes = init();
+    }
 
-	public Dab(Compte compte) {
-		this.compte = compte;
-	}
+    public Compte[] getComptes() {
+        if (comptes == null)
+            comptes = init();
+        return comptes;
+    }
 
-	public Compte getCompte() {
-		return compte;
-	}
+    public boolean virer(String cptACrediter, String cptAdebiter, int somme) {
+        boolean ok = false;
+        boolean exist1 = false;
+        boolean exist2 = false;
 
-//	public Compte[] getComptes() {
-//		return comptes;
-//	}
+        Compte compte1 = null;
+        Compte compte2 = null;
 
-	public void activer() {
+        for (Compte compte : getComptes()) {
+            if (compte.getNumero().equals(cptACrediter)) {
+                exist1 = true;
+                compte1 = compte;
+            }
 
-		scanner = new Scanner(System.in);
+            if (compte.getNumero().equals(cptAdebiter)) {
+                exist2 = true;
+                compte2 = compte;
+            }
+        }
 
-		int saisie = 0;
+        if (exist1 && exist2) {
+            compte1.retirer(somme);
+            compte2.deposer(somme);
+            ok = true;
+        }
+        return ok;
+    }
 
-		do {
-			System.out.println(String.format("1 - %s", Menu.Retrait));
-			System.out.println(String.format("2 - %s", Menu.Depot));
-			System.out.println(String.format("3 - %s", Menu.Solde));
-			System.out.println(String.format("4 - %s", Menu.Quitter));
+    private Compte[] init() {
+        Compte[] cpts = new Compte[10];
+        int[] soldes = {125, 365, 948, 578, 142, 9875, 623, 1023, 968, 2314};
 
-			try {
-				System.out.println();
-				saisie = scanner.nextInt();
-			} catch (Exception e) {
-				System.out.println("\nVous devez saisir un entier");
-				e.printStackTrace();
-				return;
-			}
+        for (int i = 0; i < cpts.length; i++) {
+            cpts[i] = new Compte("CPT" + (i + 1), soldes[i]);
+        }
+        return cpts;
+    }
 
-			String affiche = "Vous avez fait le choix ";
+    private boolean compteExits(String numero) {
+        boolean ok = false;
+        for (Compte compte : getComptes()) {
+            if (compte.getNumero().equalsIgnoreCase(numero)) {
+                ok = true;
+                break;
+            }
+        }
+        return !ok;
+    }
 
-			switch (saisie) {
-			case 1: {
-				System.out.println(affiche + saisie + "\n");
-				break;
-			}
+    public Compte getCompteByNumero(String numero) {
+        Compte cpte = null;
+        for (Compte compte : comptes) {
+            if (compte.getNumero().equalsIgnoreCase(numero)) {
+                cpte = compte;
+                break;
+            }
+        }
+        return cpte;
+    }
 
-			case 2:
-				System.out.println(affiche + saisie);
-				break;
+    public void activer() {
+        Scanner scanner = new Scanner(System.in);
 
-			case 3:
-				System.out.println(affiche + saisie);
-				break;
+        String numero;
 
-			case 4:
-				System.out.println(affiche + saisie + "\nMerci et au revoir");
-				break;
+        do {
+            System.out.print("Entrez votre N° de compte ou Q pour arreter le progragmme: ");
+            numero = scanner.next();
 
-			default:
-				System.out.println("Votre choix ne peut etre prise en compte");
-				break;
-			}
-		} while (saisie != 4);
-	}
+            if (numero.equals("Q")) {
+                System.out.println("Vous avez decider de quitter le programme. Au revoir\n");
+                System.exit(0);
+            }
+
+            if (compteExits(numero)) {
+                System.out.println("Attention ce compte est inexitant dans cette bank !!!\n");
+            }
+        } while (compteExits(numero));
+
+        Compte compte = getCompteByNumero(numero);
+
+        String saisie;
+
+        do {
+            System.out.printf("\n1 - %s\n", Menu.RETRAIT);
+            System.out.printf("2 - %s\n", Menu.DEPOT);
+            System.out.printf("3 - %s\n", Menu.SOLDE);
+            System.out.printf("4 - %s\n", Menu.QUITTER);
+
+            System.out.print("\nFaites votre choix : ");
+            saisie = scanner.next();
+
+            StringBuilder affiche;
+            affiche = new StringBuilder("Vous avez fait le choix ");
+
+            switch (saisie) {
+                case "1" -> {
+                    System.out.println(affiche.toString() + 1);
+                    System.out.print("Montant du retrait: ");
+
+                    if (scanner.hasNextInt()) {
+                        int montantDuRetrait = scanner.nextInt();
+                        if (montantDuRetrait > compte.getSolde()) {
+                            System.out.println("Désolé, ce retait n'est pas possible !!!");
+                        } else {
+                            compte.retirer(montantDuRetrait);
+                            System.out.println("Retrait effectué avec succès !!!");
+                        }
+                    } else {
+                        System.out.println("La somme à retirer doit être un entier !!!");
+                        scanner = new Scanner(System.in);
+                    }
+                }
+                case "2" -> {
+                    System.out.println(affiche.toString() + 2);
+                    System.out.print("Montant du retrait: ");
+
+                    if (scanner.hasNextInt()) {
+                        int montantDuDepot = scanner.nextInt();
+                        if (montantDuDepot < 0) {
+                            System.out.println("Désolé, ce depôt n'est pas possible !");
+                        } else {
+                            compte.deposer(montantDuDepot);
+                            System.out.println("Depôt effectué avec succès !!!");
+                        }
+                    } else {
+                        System.out.println("La somme à deposer doit être un entier positif !!!");
+                        scanner = new Scanner(System.in);
+                    }
+                }
+                case "3" -> {
+                    System.out.println(affiche.toString() + 3);
+                    System.out.print("Votre N° de compte : ");
+                    System.out.print("Votre solde est : " + compte.getSolde() + "€\n");
+                }
+                case "4" -> {
+                    System.out.println(affiche.toString() + 4);
+                    System.out.print("Fin des opérations\n");
+                }
+                default -> System.out.println("Vous devez rentrer un choix valide !!!");
+            }
+        } while (!saisie.equals("4"));
+        scanner.close();
+    }
 }

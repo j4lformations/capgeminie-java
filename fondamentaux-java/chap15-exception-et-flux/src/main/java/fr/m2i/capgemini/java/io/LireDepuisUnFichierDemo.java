@@ -2,7 +2,6 @@ package fr.m2i.capgemini.java.io;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.util.Scanner;
 
 public class LireDepuisUnFichierDemo {
