@@ -22,7 +22,7 @@
 		<module>chap-12-interfaces</module>
 		<module>chap-13-collections</module>
 		<module>chap-14-corrections</module>
-		<module>chap15-exception-et-flux</module>
+		<module>chap-15-exception-et-flux</module>
 		<module>chap-16-jdbc</module>
 	</modules>	
 	

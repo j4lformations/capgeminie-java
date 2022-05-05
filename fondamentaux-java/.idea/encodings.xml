@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/chap-01-introduction/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-01-introduction/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-02-variables/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-02-variables/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-03-operateurs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-03-operateurs/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-04-structure-decisionnelle/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-04-structure-decisionnelle/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-05-structure-iterative/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-05-structure-iterative/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-06-tableaux-chaines-de-caracteres/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-06-tableaux-chaines-de-caracteres/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-07-corrections/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-07-corrections/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-08-notion-de-classe-et-objet/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-08-notion-de-classe-et-objet/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-09-corrections/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-09-corrections/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-10-heritage-polymorphisme/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-10-heritage-polymorphisme/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-11-classe-abstraite/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-11-classe-abstraite/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-12-interfaces/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-12-interfaces/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-13-collections/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-13-collections/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-14-corrections/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-14-corrections/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-15-exception-et-flux/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-15-exception-et-flux/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-16-jdbc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chap-16-jdbc/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

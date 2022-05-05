@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="chap-01-introduction" />
+        <module name="chap-06-tableaux-chaines-de-caracteres" />
+        <module name="chap-08-notion-de-classe-et-objet" />
+        <module name="chap-13-collections" />
+        <module name="chap-04-structure-decisionnelle" />
+        <module name="chap-11-classe-abstraite" />
+        <module name="chap-09-corrections" />
+        <module name="chap-03-operateurs" />
+        <module name="chap-14-corrections" />
+        <module name="chap-15-exception-et-flux" />
+        <module name="chap-12-interfaces" />
+        <module name="chap-07-corrections" />
+        <module name="chap-10-heritage-polymorphisme" />
+        <module name="chap-02-variables" />
+        <module name="chap-16-jdbc" />
+        <module name="chap-05-structure-iterative" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
